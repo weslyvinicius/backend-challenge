@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mydbSql-Sever:
+    image: mysql/mysql-server:5.7
+    volumes:
+      - v-db-Mysql-acme:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=acme
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - 3306:3306
+volumes:
+   v-db-Mysql-acme:
